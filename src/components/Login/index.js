@@ -22,6 +22,26 @@ class Login extends Component {
     this.setState({errorMsg, showErrorMsg: true})
   }
 
+  /* onSubmitForm = async event => {
+    event.preventDefault()
+    const {username, password} = this.state
+
+    const userDetails = {username, password}
+    const LoginApiUrl = 'https://apis.ccbp.in/login'
+    const options = {
+      method: 'POST',
+      body: JSON.stringify(userDetails),
+    }
+    const response = await fetch(LoginApiUrl, options)
+    const data = await response.json()
+
+    if (response.ok === true) {
+      this.onSuccessLogin(data.jwt_token)
+    } else {
+      this.onFailureLogin(data.error_msg)
+    }
+  } */
+
   onSubmitForm = event => {
     event.preventDefault()
     const {username, password} = this.state
@@ -49,7 +69,7 @@ class Login extends Component {
           type="text"
           value={username}
           className="login-input-field"
-          placeholder="Enter your Name (rahul)"
+          placeholder="Enter your Name"
           id="username"
           onChange={this.updateUsername}
         />
@@ -68,7 +88,7 @@ class Login extends Component {
           type="password"
           value={password}
           className="login-input-field"
-          placeholder="Enter your Password (rahul@2021)"
+          placeholder="Enter your Password"
           id="password"
           onChange={this.updatePassword}
         />
