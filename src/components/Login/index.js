@@ -22,7 +22,7 @@ class Login extends Component {
     this.setState({errorMsg, showErrorMsg: true})
   }
 
-  /* onSubmitForm = async event => {
+  onSubmitForm = async event => {
     event.preventDefault()
     const {username, password} = this.state
 
@@ -39,18 +39,6 @@ class Login extends Component {
       this.onSuccessLogin(data.jwt_token)
     } else {
       this.onFailureLogin(data.error_msg)
-    }
-  } */
-
-  onSubmitForm = event => {
-    event.preventDefault()
-    const {username, password} = this.state
-
-    if (username && password) {
-      const fakeJwtToken = 'fake_jwt_token' // Simulated JWT Token
-      this.onSuccessLogin(fakeJwtToken)
-    } else {
-      this.onFailureLogin('Please enter both username and password')
     }
   }
 
