@@ -27,11 +27,9 @@ class Login extends Component {
     const {username, password} = this.state
 
     if (username && password) {
-      // Simulate successful login
       const fakeJwtToken = 'fake_jwt_token' // Simulated JWT Token
       this.onSuccessLogin(fakeJwtToken)
     } else {
-      // Simulate failure with an error message
       this.onFailureLogin('Please enter both username and password')
     }
   }
