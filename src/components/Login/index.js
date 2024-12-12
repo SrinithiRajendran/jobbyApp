@@ -42,18 +42,6 @@ class Login extends Component {
     }
   }
 
-  /* onSubmitForm = event => {
-    event.preventDefault()
-    const {username, password} = this.state
-
-    if (username && password) {
-      const fakeJwtToken = 'fake_jwt_token' // Simulated JWT Token
-      this.onSuccessLogin(fakeJwtToken)
-    } else {
-      this.onFailureLogin('Please enter both username and password')
-    }
-  } */
-
   updateUsername = event => this.setState({username: event.target.value})
 
   updatePassword = event => this.setState({password: event.target.value})
