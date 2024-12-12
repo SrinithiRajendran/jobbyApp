@@ -42,6 +42,18 @@ class Login extends Component {
     }
   }
 
+  /* onSubmitForm = event => {
+    event.preventDefault()
+    const {username, password} = this.state
+
+    if (username && password) {
+      const fakeJwtToken = 'fake_jwt_token' // Simulated JWT Token
+      this.onSuccessLogin(fakeJwtToken)
+    } else {
+      this.onFailureLogin('Please enter both username and password')
+    }
+  } */
+
   updateUsername = event => this.setState({username: event.target.value})
 
   updatePassword = event => this.setState({password: event.target.value})
@@ -57,7 +69,7 @@ class Login extends Component {
           type="text"
           value={username}
           className="login-input-field"
-          placeholder="Enter your Name"
+          placeholder="Enter your Name (rahul)"
           id="username"
           onChange={this.updateUsername}
         />
@@ -76,7 +88,7 @@ class Login extends Component {
           type="password"
           value={password}
           className="login-input-field"
-          placeholder="Enter your Password"
+          placeholder="Enter your Password (rahul@2021)"
           id="password"
           onChange={this.updatePassword}
         />
