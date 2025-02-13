@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #121212;
+  background-color: #000000;
   /* border: 1px solid white; */
 }
 .jobs-page {
@@ -11,8 +11,19 @@
   width: 90%;
   align-self: center;
   padding-bottom: 40px;
+
   /* border: 1px solid white; */
 }
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: You can still make the content scrollable */
+.scrollable {
+  overflow: scroll; /* or 'auto' */
+}
+
 @media screen and (min-width: 768px) {
   .jobs-page {
     display: flex;
@@ -38,6 +49,8 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  height: 600px;
+  overflow-y: scroll;
   /* border: 1px solid white; */
 }
 .jobs-list {
@@ -50,11 +63,12 @@
 }
 
 .search-bar {
-  width: 100%;
-  border: 1px solid #cbd5e1;
+  width: 80%;
+  border: 1px solid #dfe0e1;
   border-radius: 5px;
-  height: 35px;
+  height: 50px;
   display: flex;
+  padding: 4px;
 }
 #largeSearchBar {
   display: none;
@@ -62,8 +76,8 @@
 
 @media screen and (min-width: 768px) {
   .search-bar {
-    max-width: 430px;
-    height: 40px;
+    max-width: 500px;
+    height: 50px;
   }
   #smallSearchBar {
     display: none;
@@ -76,11 +90,12 @@
   flex-grow: 1;
   background-color: transparent;
   border: none;
-  padding: 4px 4px 4px 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
   font-family: 'Roboto';
   font-size: 14px;
   color: #f1f5f9;
-
   cursor: pointer;
   outline: none;
 }
@@ -88,9 +103,13 @@
   .search-input {
     font-size: 16px;
   }
+  .search-bar {
+    width: 100%;
+    height: 50px;
+  }
 }
 .search-button {
-  width: 15%;
+  width: 10%;
   background-color: #272727;
   border: none;
 

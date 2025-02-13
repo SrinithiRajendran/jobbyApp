@@ -22,6 +22,10 @@ const employmentTypesList = [
 
 const salaryRangesList = [
   {
+    salaryRangeId: '0',
+    label: 'None',
+  },
+  {
     salaryRangeId: '1000000',
     label: '10 LPA and above',
   },

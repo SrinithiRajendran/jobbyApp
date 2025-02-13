@@ -6,8 +6,8 @@ import './index.css'
 
 class Login extends Component {
   state = {
-    username: '',
-    password: '',
+    username: 'rahul',
+    password: 'rahul@2021',
     errorMsg: '',
     showErrorMsg: false,
   }
@@ -56,8 +56,10 @@ class Login extends Component {
         <input
           type="text"
           value={username}
+          defaultValue="rahul"
+          readOnly
           className="login-input-field"
-          placeholder="Enter your Name (rahul)"
+          placeholder="Enter name as (rahul)"
           id="username"
           onChange={this.updateUsername}
         />
@@ -75,8 +77,10 @@ class Login extends Component {
         <input
           type="password"
           value={password}
+          defaultValue="rahul@2021"
+          readOnly
           className="login-input-field"
-          placeholder="Enter your Password (rahul@2021)"
+          placeholder="Enter Password as (rahul@2021)"
           id="password"
           onChange={this.updatePassword}
         />

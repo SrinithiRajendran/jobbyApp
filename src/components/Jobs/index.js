@@ -127,13 +127,15 @@ class Jobs extends Component {
           type="search"
           placeholder="Search"
           value={searchInput}
-          onChange={e => this.setState({searchInput: e.target.value})}
+          onChange={e => {
+            this.setState({searchInput: e.target.value}, this.getJobs)
+          }}
         />
         <button
           className="search-button"
           type="button"
           data-testid="searchButton"
-          onClick={() => this.getJobs()}
+          onClick={this.getJobs}
         >
           <BsSearch className="search-icon" />
         </button>
@@ -215,11 +217,7 @@ class Jobs extends Component {
       <p className="failure-view-description">
         We cannot seem to find the page you are looking for.
       </p>
-      <button
-        type="button"
-        className="retry-button"
-        onClick={() => this.getJobs()}
-      >
+      <button type="button" className="retry-button" onClick={this.getJobs}>
         Retry
       </button>
     </div>
@@ -255,4 +253,5 @@ class Jobs extends Component {
     )
   }
 }
+
 export default Jobs
